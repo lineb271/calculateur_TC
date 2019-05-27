@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset='utf-8' />
+  <title>Test lignes stops</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+  <div id='map'></div>
+  <script src="sketch.js" type="text/javascript"></script>
+  <script>
+/*    mapboxgl.accessToken = 'pk.eyJ1IjoiZm1hcnRpbmV6YyIsImEiOiJjamUwMnp2MjUxb3B3MnlxcDhvYjFvaHlwIn0.BlU6OZTxUQ2mGEcnt0TWbg';
+    var map = new mapboxgl.Map({
+      container: 'map', // container id
+      style: 'mapbox://styles/fmartinezc/cjed81k2j3op12so74kf8hwxv', //hosted style id
+      center: [-1.031257, 45.627588], // starting position
+      zoom: 10 // starting zoom
+    });
+
+    //on assigne les fichiers JSON aux variables stoptimes et trips pour pouvoir y accéder dynamiquement
+/*
+  function loadJSON(filename, encoding) {
+    try {
+      if (typeof (encoding) == 'undefined') encoding = 'utf8';
+      var contents = fs.readFileSync(filename, encoding);
+      return JSON.parse(contents);
+    } catch (err) {
+      throw err;
+    }
+  }
+  var timetables = [];
+  timetables = loadJSON("C:/Users/Fmartinez/Documents/CIV 6707A/Projet/Interface/Timetables.json");
+
+    map.on('load', function() {
+
+          map.addLayer({
+        "id": "route",
+        "type": "line",
+        "source": {
+          "type": "geojson",
+          "data": {
+            "type": "Feature",
+            "properties": {},
+            "geometry": {
+              "type": "LineString",
+              /*let sequence = 1;
+              let coordonnees = [];
+              for (let i = 0, count = timetables.length; i < count; i++){
+                const coord = {};
+                if (timetables[i].route_id = 34 && timetables[i].service_id = 3 && timetables[i].trip_id = 1){
+                  if (timetables[i].stop_sequence == sequence){
+                     coord.lat = timetables[i].stop_lat;
+                     coord.lon = timetables[i].stop_lon;
+                     coordonnees.push(coord);
+                     sequence++;
+                  }
+                }
+              }
+              "coordinates": coordonnees;
+              "coordinates": [
+                [-0.862579965800766,45.5558199753807],[-0.862524599998597,45.555863328412],[-0.86724584135282,45.5692727502296],[-0.867179360500059,45.5692535674762], [-0.878072621575062,45.5605938621377],[-0.878147156790972,45.5605558116522], [-0.860176600262497,45.5531273735008], [-0.86029058515097,45.5530977511995],
+                [-0.871107617703838,45.5639195110301], [-0.871045033498418,45.5638978149162], [-0.894964835096566,45.5692097455915], [-0.893994909585681,45.5688334346087],[-0.861596876703736,45.5550807529563], [-0.861672113069295,45.5550352833578], [-1.10899580870146,45.7433252604978], [-1.10882067903862,45.7432219360979],
+                [-1.12946,45.73917], [-1.12931,45.73922], [-1.14265716213633,45.7459369382712], [-1.14257531761908,45.7460176442031], [-1.13882378800988,45.7450444702019]
+              ]
+
+            }
+          }
+        },
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        },
+        "paint": {
+          "line-color": "#570606",
+          "line-width": 3
+        }
+      });
+    });*/
+    //console.log(this.coordinates);
+  </script>
+
+</body>
+
+</html>

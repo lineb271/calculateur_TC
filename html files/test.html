@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>Add a GeoJSON line</title>
+  <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+  <style>
+      body { margin:0; padding:0; }
+      #map { position:absolute; top:0; bottom:0; width:100%; }
+  </style>
+</head>
+<body>
+
+<div id='map'></div>
+
+</head>
+<body>
+<style>
+
+</style>
+
+<div id='map'></div>
+<pre id='coordinates' class='ui-coordinates'></pre>
+
+<script>
+var data;
+
+
+test = loadJSON("/Users/Lionel/Documents/Cours Polytechnique Montréal/Winter 2018/CIV 6707A - Technologie transports et innovations /interface/it.json");
+console.log(test);
+
+
+data = {
+  "waypoints": [{
+    "location": [-1.016518, 45.628724],
+    "name": "Avenue des Fleurs de la Paix",
+    "hint": "qOcDgJuDBIAoAAAAGgAAAAAAAACiAAAAKAAAABoAAAAAAAAAogAAAAEAAAA6ffD_ND24AmB98P8cPbgCAADfDWqT3ME="
+  }, {
+    "location": [-1.028872, 45.623388],
+    "name": "Promenoir",
+    "hint": "HgQCgEQfA4ClAAAABwAAAFAAAAAlAAAApQAAAAcAAABQAAAAJQAAAAEAAAD4TPD_XCi4AglN8P9KKLgCAQB_A2qT3ME="
+  }],
+  "routes": [{
+    "distance": 1179.5,
+    "duration": 851.1,
+    "weight": 851.1,
+    "weight_name": "duration",
+    "geometry": "oznuGfpeEhAbB@r@`@Fn@f@bFtGh@~@|@hCxGzVTxAx@zAt@jC\\fFr@~DOX|AzF",
+    "legs": [{
+      "distance": 1179.5,
+      "duration": 851.1,
+      "weight": 851.1,
+      "summary": "Boulevard du Maréchal de Lattre de Tassigny, Boulevard de Lattre de Tassigny",
+      "steps": [{
+        "mode": "walking",
+        "distance": 57.2,
+        "duration": 41.2,
+        "intersections": [{
+          "location": [-1.016518, 45.628724],
+          "bearings": [222],
+          "entry": [true],
+          "out": 0
+        }, {
+          "location": [-1.016744, 45.628551],
+          "in": 1,
+          "bearings": [0, 45, 225],
+          "entry": [true, false, true],
+          "out": 2
+        }],
+        "geometry": "oznuGfpeEBD\\d@\\f@BDDH",
+        "weight": 41.2,
+        "driving_side": "right",
+        "maneuver": {
+          "type": "depart",
+          "location": [-1.016518, 45.628724],
+          "bearing_before": 0,
+          "bearing_after": 222
+        },
+        "name": "Avenue des Fleurs de la Paix"
+      }, {
+        "mode": "walking",
+        "distance": 43,
+        "duration": 30.8,
+        "intersections": [{
+          "location": [-1.017018, 45.628347],
+          "in": 0,
+          "bearings": [45, 135, 300],
+          "entry": [false, true, true],
+          "out": 2
+        }, {
+          "location": [-1.017344, 45.628204],
+          "in": 0,
+          "bearings": [0, 165, 315],
+          "entry": [false, true, true],
+          "out": 1
+        }],
+        "geometry": "exnuGjseECJAL@LDJFFHDHADC",
+        "weight": 30.8,
+        "driving_side": "right",
+        "maneuver": {
+          "type": "end of road",
+          "modifier": "right",
+          "location": [-1.017018, 45.628347],
+          "bearing_before": 223,
+          "bearing_after": 296
+        },
+        "name": ""
+      }, {
+        "mode": "walking",
+        "distance": 197.4,
+        "duration": 142.1,
+        "intersections": [{
+          "location": [-1.017324, 45.628166],
+          "in": 2,
+          "bearings": [150, 210, 345],
+          "entry": [true, true, false],
+          "out": 1
+        }, {
+          "location": [-1.017524, 45.62793],
+          "in": 0,
+          "bearings": [30, 60, 225],
+          "entry": [false, true, true],
+          "out": 2
+        }, {
+          "location": [-1.018571, 45.6271],
+          "in": 0,
+          "bearings": [41, 210, 221, 227],
+          "entry": [false, true, true, true],
+          "out": 2
+        }],
+        "geometry": "awnuGfueEJFHFXVPTz@nAX\\Zb@TZJL^f@\\Z",
+        "weight": 142.1,
+        "driving_side": "right",
+        "maneuver": {
+          "type": "turn",
+          "modifier": "right",
+          "location": [-1.017324, 45.628166],
+          "bearing_before": 158,
+          "bearing_after": 206
+        },
+        "name": "Boulevard du Maréchal de Lattre de Tassigny"
+      }, {
+        "mode": "walking",
+        "distance": 35.9,
+        "duration": 25.8,
+        "intersections": [{
+          "location": [-1.018907, 45.626787],
+          "in": 0,
+          "bearings": [30, 135, 270],
+          "entry": [false, true, true],
+          "out": 2
+        }, {
+          "location": [-1.018936, 45.626786],
+          "in": 0,
+          "bearings": [90, 270, 345],
+          "entry": [false, true, true],
+          "out": 1
+        }, {
+          "location": [-1.019017, 45.626751],
+          "in": 1,
+          "bearings": [0, 45, 225],
+          "entry": [true, false, true],
+          "out": 2
+        }, {
+          "location": [-1.019056, 45.626718],
+          "in": 0,
+          "bearings": [30, 225, 270],
+          "entry": [false, true, true],
+          "out": 1
+        }],
+        "geometry": "mnnuGd_fE?D@DDH@@BDZ`@",
+        "weight": 25.8,
+        "driving_side": "right",
+        "maneuver": {
+          "type": "end of road",
+          "modifier": "right",
+          "location": [-1.018907, 45.626787],
+          "bearing_before": 210,
+          "bearing_after": 265
+        },
+        "name": ""
+      }, {
+        "mode": "walking",
+        "distance": 432.7,
+        "duration": 313.6,
+        "intersections": [{
+          "location": [-1.019232, 45.626575],
+          "in": 0,
+          "bearings": [45, 180, 240],
+          "entry": [false, true, true],
+          "out": 2
+        }, {
+          "location": [-1.019505, 45.626461],
+          "in": 0,
+          "bearings": [60, 90, 240],
+          "entry": [false, true, true],
+          "out": 2
+        }, {
+          "location": [-1.020233, 45.626169],
+          "in": 0,
+          "bearings": [60, 240, 330],
+          "entry": [false, true, true],
+          "out": 1
+        }, {
+          "location": [-1.021496, 45.625706],
+          "in": 0,
+          "bearings": [60, 240, 330],
+          "entry": [false, true, true],
+          "out": 1
+        }, {
+          "location": [-1.022657, 45.625266],
+          "in": 0,
+          "bearings": [60, 153, 241, 244],
+          "entry": [false, true, true, true],
+          "out": 3
+        }, {
+          "location": [-1.022821, 45.625211],
+          "in": 0,
+          "bearings": [60, 75, 135, 240],
+          "entry": [false, true, true, true],
+          "out": 3
+        }, {
+          "location": [-1.023223, 45.62505],
+          "in": 0,
+          "bearings": [60, 240],
+          "entry": [false, true],
+          "out": 1
+        }, {
+          "location": [-1.023344, 45.625011],
+          "in": 0,
+          "bearings": [60, 150, 240],
+          "entry": [false, true, true],
+          "out": 2
+        }, {
+          "location": [-1.023486, 45.624958],
+          "in": 0,
+          "bearings": [60, 180, 240],
+          "entry": [false, true, true],
+          "out": 2
+        }],
+        "geometry": "cmnuGdafEHXL\\d@pALl@DNDLDNbAxDFRBPFLb@bB`@xADLBLJ^Vx@@DDNFVH\\Rp@Hb@@FDb@",
+        "weight": 313.6,
+        "driving_side": "right",
+        "maneuver": {
+          "type": "turn",
+          "modifier": "straight",
+          "location": [-1.019232, 45.626575],
+          "bearing_before": 219,
+          "bearing_after": 244
+        },
+        "name": "Boulevard de Lattre de Tassigny"
+      }, {
+        "mode": "walking",
+        "distance": 287.5,
+        "duration": 206.9,
+        "intersections": [{
+          "location": [-1.024141, 45.624766],
+          "in": 0,
+          "bearings": [75, 135, 240, 285, 330],
+          "entry": [false, true, true, true, true],
+          "out": 2
+        }, {
+          "location": [-1.024267, 45.624707],
+          "in": 0,
+          "bearings": [60, 105, 225, 285],
+          "entry": [false, true, true, true],
+          "out": 2
+        }, {
+          "location": [-1.024405, 45.624611],
+          "in": 0,
+          "bearings": [45, 90, 135, 225, 315],
+          "entry": [false, true, true, true, true],
+          "out": 3
+        }, {
+          "location": [-1.025353, 45.62419],
+          "in": 0,
+          "bearings": [60, 75, 225, 255],
+          "entry": [false, true, true, true],
+          "out": 3
+        }],
+        "geometry": "yanuGz_gEBHFNDFLRR\\HPXjAHXPd@DXDX@NHnB?F@JB^XpABHBJHh@Fl@",
+        "weight": 206.9,
+        "driving_side": "right",
+        "maneuver": {
+          "type": "turn",
+          "modifier": "slight left",
+          "location": [-1.024141, 45.624766],
+          "bearing_before": 255,
+          "bearing_after": 234
+        },
+        "name": "Front de Mer"
+      }, {
+        "mode": "walking",
+        "distance": 13.4,
+        "duration": 9.6,
+        "intersections": [{
+          "location": [-1.027473, 45.623775],
+          "in": 0,
+          "bearings": [75, 135, 255, 315],
+          "entry": [false, true, true, true],
+          "out": 3
+        }],
+        "geometry": "s{muGttgEOX",
+        "weight": 9.6,
+        "driving_side": "right",
+        "maneuver": {
+          "type": "turn",
+          "modifier": "right",
+          "location": [-1.027473, 45.623775],
+          "bearing_before": 253,
+          "bearing_after": 313
+        },
+        "name": ""
+      }, {
+        "mode": "walking",
+        "distance": 56,
+        "duration": 40.3,
+        "intersections": [{
+          "location": [-1.027596, 45.623859],
+          "in": 1,
+          "bearings": [75, 135, 240, 330],
+          "entry": [true, false, true, true],
+          "out": 2
+        }, {
+          "location": [-1.028011, 45.623735],
+          "in": 0,
+          "bearings": [60, 150, 240],
+          "entry": [false, true, true],
+          "out": 2
+        }, {
+          "location": [-1.028118, 45.623696],
+          "in": 0,
+          "bearings": [60, 150, 240, 330],
+          "entry": [false, true, true, true],
+          "out": 2
+        }],
+        "geometry": "c|muGnugEVpABJBH@DDP@@",
+        "weight": 40.3,
+        "driving_side": "right",
+        "maneuver": {
+          "type": "turn",
+          "modifier": "left",
+          "location": [-1.027596, 45.623859],
+          "bearing_before": 313,
+          "bearing_after": 246
+        },
+        "name": "Promenoir"
+      }, {
+        "mode": "walking",
+        "distance": 56.5,
+        "duration": 40.8,
+        "intersections": [{
+          "location": [-1.028252, 45.623652],
+          "in": 0,
+          "bearings": [60, 150, 240, 330],
+          "entry": [false, true, true, true],
+          "out": 2
+        }, {
+          "location": [-1.028807, 45.623416],
+          "in": 0,
+          "bearings": [60, 240, 345],
+          "entry": [false, true, true],
+          "out": 1
+        }],
+        "geometry": "yzmuGpygE@F^fAJ^DH",
+        "weight": 40.8,
+        "driving_side": "right",
+        "maneuver": {
+          "type": "continue",
+          "modifier": "straight",
+          "location": [-1.028252, 45.623652],
+          "bearing_before": 244,
+          "bearing_after": 239
+        },
+        "name": "Promenoir"
+      }, {
+        "mode": "walking",
+        "distance": 0,
+        "duration": 0,
+        "intersections": [{
+          "location": [-1.028872, 45.623388],
+          "in": 0,
+          "bearings": [59],
+          "entry": [true]
+        }],
+        "geometry": "eymuGj}gE",
+        "weight": 0,
+        "driving_side": "right",
+        "maneuver": {
+          "type": "arrive",
+          "location": [-1.028872, 45.623388],
+          "bearing_before": 239,
+          "bearing_after": 0
+        },
+        "name": "Promenoir"
+      }]
+    }]
+  }],
+  "code": "Ok"
+};
+console.log(data);
+
+
+// var mode;
+// var mode=data.routes["0"].legs["0"].steps["0"].mode;
+
+var path=[];
+var n;
+
+
+mapboxgl.accessToken = 'pk.eyJ1IjoibGluZWIyNzEiLCJhIjoiY2pkeGV5NmNwMjhxNTJ2bXVpcTZoMG5odSJ9.qmLCtuU0Qzg9kc7TMCrBtg';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [-1.024, 45.624],
+    zoom: 15
+});
+
+map.on('load', function () {
+
+n=data.routes["0"].legs["0"].steps.length;
+
+for (var i = 0; i < n; i++) {
+  path.push([data.routes[0].legs[0].steps[i].intersections[0].location[0],
+             data.routes[0].legs[0].steps[i].intersections[0].location[1]
+          ]);
+}
+    map.addLayer({
+        "id": "route",
+        "type": "line",
+        "source": {
+            "type": "geojson",
+            "data": {
+                "type": "Feature",
+                "properties": {},
+                "geometry": {
+                    "type": "LineString",
+                    "coordinates": path
+                }
+            }
+        },
+        "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+        },
+        "paint": {
+            "line-color": "#ffcc00",
+            "line-width": 7,
+            "line-opacity":0.5
+        }
+    });
+});
+
+
+
+</script>

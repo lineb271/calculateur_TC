@@ -1,0 +1,57 @@
+route_id,agency_id,route_short_name,route_long_name,route_desc,route_type,route_url,route_color,route_text_color
+1,TDRA,COZ-1,Cozes 1 - Semussac Rivière < > Cozes,,3,,CE750F,FFFFFF
+2,TDRA,COZ-2,Cozes 2 - Semussac Z.A. < > Cozes,,3,,C5007B,FFFFFF
+3,TDRA,COZ-3,Cozes 3 - Talmont < > Cozes,,3,,834365,FFFFFF
+4,TDRA,COZ-4,Cozes 4 -  Boutenac < > Cozes,,3,,009CA4,FFFFFF
+5,TDRA,COZ-5,Cozes 5 -  Mortagne < > Cozes,,3,,0B72B5,FFFFFF
+6,TDRA,COZ-6,Cozes 6 -  Thaims < > Cozes,,3,,97BF0D,FFFFFF
+11,TDRA,TREMB1,TREMB 1 St-Augustin  < > La Tremblade,,3,,89408E,FFFFFF
+12,TDRA,TREMB2,TREMB 2 Chaillevette  < > La Tremblade,TREMB 2 Chaillevette < > La Tremblade,3,,A54C21,FFFFFF
+13,TDRA,TREMB3,TREMB 3 Etaules - Pirouette < > La Tremblade,,3,,739BAC,FFFFFF
+14,TDRA,TREMB4,TREMB 4 La Palmyre < > La Tremblade,,3,,6D1F80,FFFFFF
+15,TDRA,TREMB5,TREMB 5 Arvert Halle < > La Tremblade,,3,,0098B7,FFFFFF
+16,TDRA,TREMB6,TREMB 6 Etaules - OT < > La Tremblade,,3,,006C2B,FFFFFF
+31,TDRA,11,L11 St-Sulpice-de-Royan < > Royan,,3,,1FA12D,FFFFFF
+32,TDRA,12,L12 St-Georges-de-Didonne < > St-Palais-sur-Mer,,3,,93107E,FFFFFF
+33,TDRA,21,L21 Les Mathes < > Royan,,3,,62C3DD,FFFFFF
+34,TDRA,22,L22 Ronce-les-Bains < > Royan,,3,,F29400,FFFFFF
+35,TDRA,23,L23 Saujon < > Royan,,3,,857AB3,FFFFFF
+36,TDRA,24,L24 Cozes < > Royan,,3,,D7AE00,FFFFFF
+37,TDRA,25,L25 Meschers < > Royan,,3,,DD84B1,FFFFFF
+38,TDRA,101,L101 Ronce-les-Bains < > Royan ,,3,,8CA6D2,FFFFFF
+40,TDRA,103,L103 Arvert Fouilloux < > Royan - Cordouan,,3,,8E3424,FFFFFF
+41,TDRA,104,L104 Arvert  Dirée < > Royan - Cordouan,,3,,B00A46,FFFFFF
+42,TDRA,105,L105 Chaillevette < > Royan - Cordouan,,3,,F2B700,FFFFFF
+43,TDRA,106,L106 St-Palais-sur-Mer  < > Royan Cordouan,,3,,92C476,FFFFFF
+44,TDRA,107,L107 Chaillevette < > Royan - Cordouan,,3,,D08E55,FFFFFF
+45,TDRA,108,L108 L'Eguille  < > Royan - Cordouan,,3,,ABB68C,FFFFFF
+46,TDRA,109,L109 Saujon < > Royan - Cordouan,109 Saujon  < > Royan - Cordouan,3,,A7BBC1,FFFFFF
+47,TDRA,110,L110 Saujon Berlan < > Royan - Cordouan,,3,,8CCAB4,FFFFFF
+48,TDRA,111,L111 Grézac < > Royan - Cordouan,,3,,2699D1,FFFFFF
+49,TDRA,115,L115  Royan - Ste Marie > Arvert,,3,,7CA421,FFFFFF
+50,TDRA,112,L112 Cozes Garde < > Royan - Cordouan,,3,,F19FC1,000000
+51,TDRA,113,L113 Semussac Valade < > Royan - Cordouan,,3,,A08717,FFFFFF
+52,TDRA,114,L114 Royan - Cordouan > Arvert,,3,,AD6556,FFFFFF
+53,TDRA,121,L121 St-Palais-sur-Mer < > Royan - Dunant,,3,,D40032,FFFFFF
+54,TDRA,122,L122 St-Palais-sur-Mer < > Royan - Dunant,,3,,D85017,FFFFFF
+55,TDRA,123,L123 Breuillet < > Royan - Dunant,,3,,AD8473,FFFFFF
+56,TDRA,124,L124 St-Sulpice < > Royan - Dunant,,3,,B17C14,FFFFFF
+57,TDRA,125,L125 St-Sulpice < > Royan - Dunant,,3,,B0BC00,FFFFFF
+58,TDRA,126,L126 Mornac > Royan - Dunant,,3,,F6AA41,FFFFFF
+59,TDRA,127,L127 Royan - Cordouan < > Royan - Dunant,,3,,EC7404,FFFFFF
+60,TDRA,131,L131 St-Palais-sur-Mer > Royan - Dunant,,3,,D40032,FFFFFF
+61,TDRA,140,L140 Royan - Dunant > Vaux-sur-Mer,,3,,D85017,FFFFFF
+62,TDRA,141,L141 Royan - Dunant > St-Palais-sur-Mer,,3,,D40032,FFFFFF
+63,TDRA,142,L142 Royan - Dunant > St-Sulpice-de-Royan,,3,,B0BC00,FFFFFF
+64,TDRA,143,L143 Royan - Dunant > St-Sulpice-de-Royan,,3,,F6AA41,FFFFFF
+104,TDRA,TREMB7,TREMB 7 Ecole La Sabliere,,3,,333399,FFFFFF
+113,TDRA,116,L116 Royan - CES Zola > Meschers ,,3,,857639,FFFFFF
+126,TDRA,13,L13 Royan < > Vaux-sur-mer,,3,,162983,FFFFFF
+128,TDRA,41,L41 SUR RESERVATION,,3,,BFD630,000000
+132,TDRA,500, Navettes de desserte de tous Collèges et Lycées de Royan,,3,,7A6EAC,FFFFFF
+133,TDRA,10,L10  Arago < > ZA Plain,,3,,E2001A,FFFFFF
+134,TDRA,14,L14 Lycée Cordouan < > La Perche,,3,,FFEC00,000000
+158,TDRA,117,L117 St-Sulpice-de-Royan < > Royan - Zola,,3,,F2B700,FFFFFF
+161,TDRA,42,L42 SUR RESERVATION,,3,,E62F8E,FFFFFF
+172,TDRA,15,L15 Saujon Hopiteau < > Gare SNCF,,3,,FCC000,000000
+184,TDRA,TREMB8,TREMB 8 Doublage aller,,3,,CC99FF,FFFFFF

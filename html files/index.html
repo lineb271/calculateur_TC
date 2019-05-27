@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Calculateur de trajets</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.css' rel='stylesheet' />
+    <style>
+        body { margin:0; padding:0; }
+        #map { position:absolute; top:0; bottom:0; width:100%; }
+    </style>
+</head>
+<body>
+
+<style type='text/css'>
+	/* #info {		 display: block;
+  		 position: relative;
+  		 margin: 0px auto;
+  		 width: 50%;
+  		 padding: 10px;
+  		 border: none;
+  		 border-radius: 3px;
+  		 font-size: 12px;
+  		 text-align: center;
+  		 color: #222;
+  		 background: #fff; */
+       /* zone blanche où l'on a de l'écriture */
+    }
+</style>
+<div id='map'></div>
+<pre id='info'></pre>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoibGluZWIyNzEiLCJhIjoiY2pkeGV5NmNwMjhxNTJ2bXVpcTZoMG5odSJ9.qmLCtuU0Qzg9kc7TMCrBtg';
+var map = new mapboxgl.Map({
+    container: 'map', // container id
+    style: 'mapbox://styles/mapbox/streets-v9',
+    center: [-1.024, 45.624], // starting position
+    zoom: 15 // starting zoom
+});
+
+
+var absc;
+var ord;
+var longi;
+var lati;
+
+// var coordonnees=[];
+// var long;
+// var Longitudes=[];
+//var reg="\{\"x\":([0-9.-]+),\"y\":([0-9.-]+)\}";
+// var test=[];
+
+
+map.on('click', function (e) { // récupérer les coordonnées cartésiennes et longitudinales de la souris au click
+        // e.point is the x, y coordinates of the mousemove event relative
+        // to the top-left corner of the map
+        // cart=JSON.stringify(e.point);
+        // console.log(cart);
+        // cartes=cart.match(reg);
+        // console.log(cartes);
+        // console.log(e);
+        //
+        // coordonnees = cart.match(reg);
+        // console.log(cart);
+        // console.log(coordonnees);
+
+
+
+      // absc=e.point.x;
+      // console.log(absc);
+      // ord=e.point.y;
+      // console.log(ord);
+      // console.log(e);
+      //
+      lati=e.lngLat.lat;
+      console.log(lati);
+      longi=e.lngLat.lng;
+      console.log(longi);
+
+
+      // longi=JSON.stringify(e.lngLat);
+      // long=longi.match(reg);
+      // console.log(long)
+
+      //
+      // longi=e.lgtLat.long;
+      // lati=e.lngLat.lat;
+//-1.34,1234.3456
+
+        // long=JSON.stringify(e.lgtLat);
+        // console.log(long);
+        // Long=long.match(reg);
+        // console.log(Long);
+        // long=JSON.stringify(e.lngLat);
+        // console.log(long);
+        // cartes=cart.split(reg);
+        // console.log(cartes);
+      });
+
+    //  {"x":-1.34567, "y":12.18349}
+
+//map.on('click', function (e) {
+
+    // var long= document.getElementById('info').innerHTML =
+    //     // e.lngLat is the longitude, latitude geographical position of the event
+    //     JSON.stringify(e.lngLat);
+    //   });
+
+//console.log(cart);
+//console.log(long);
+</script>
+
+</body>
+</html>

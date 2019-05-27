@@ -1,0 +1,24 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "Repository du groupe\r TEST\r Hello",
+  "main": "Rename.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Charlo1993/CalculateurTC_HIV18.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Charlo1993/CalculateurTC_HIV18/issues"
+  },
+  "homepage": "https://github.com/Charlo1993/CalculateurTC_HIV18#readme",
+  "dependencies": {
+    "csvtojson": "^1.1.9",
+    "graceful-fs": "^4.1.11"
+  },
+  "devDependencies": {}
+}

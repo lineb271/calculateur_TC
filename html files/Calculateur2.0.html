@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculateur de trajet 300 point zéro </title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v3.1.1/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:66% }
+</style>
+</head>
+<body>
+<style>
+
+</style>
+
+<div id='map'></div>
+<pre id='coordinates' class='ui-coordinates'></pre>
+
+<!-- <script>
+prompt(test[, default]);
+</script> -->
+
+<script>
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiZm1hcnRpbmV6YyIsImEiOiJjamUwMnp2MjUxb3B3MnlxcDhvYjFvaHlwIn0.BlU6OZTxUQ2mGEcnt0TWbg';
+
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([45.624, -1.024], 15);
+
+var coordinates = document.getElementById('coordinates');
+
+//rouge
+var origin = L.marker([45.627588, -1.031257], {
+    icon: L.mapbox.marker.icon({
+      'marker-color': '#f86767'
+    }),
+    draggable: true
+}).addTo(map);
+
+ // bleu
+var destination = L.marker([45.627588, -1.031260], {
+    icon: L.mapbox.marker.icon({
+      'marker-color': '#3887be'
+    }),
+    draggable: true
+}).addTo(map);
+
+origin.on('dragend', ondragend);
+destination.on('dragend', ondragend);
+
+var heure = prompt("Entrez votre heure de départ s'il vous plaît hh:mm en format 24h");
+
+ondragend();
+
+function ondragend() {
+    var m = origin.getLatLng();
+    var originlatitude=m.lat;
+    var originlongitude=m.lng;
+
+    var n = destination.getLatLng();
+    var destlatitude=n.lat;
+    var destlongitude=n.lng;
+    console.log(heure);
+
+
+}
+</script>
+</body>
+</html>
