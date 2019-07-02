@@ -2,4 +2,4 @@
 
 Projet de cours : CIV6707A Transports - Technologies et innovation
 
-Implementation d'un calculateru de trajets en transports en communs sur la ville de Royan (France) 
+Implementation d'un calculateur de trajets en transports en communs sur la ville de Royan (France) 
